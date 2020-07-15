@@ -32,7 +32,8 @@ h3 {
 }
 
 .right-content {
-margin-top: 5em
+  margin-top: 5em;
+  justify-content: center;
 }
 
 .blue-button {
@@ -62,9 +63,30 @@ button{
 }
 
 .login-form {
-  font-size: 0.75em;
+  font-size: 1.5em;
+  justify-content: center;
 }
 
 .field {
   margin: 0em 2em;
+}
+
+.registerForm {
+  justify-content: center;
+  font-size: 1.5em;
+}
+
+
+table { margin: auto; }
+
+td {
+    padding: 0em 2em;
+}
+
+.login-buttons {
+  font-size: 1.5em
+}
+
+.center-content {
+  justify-content: center;
 }

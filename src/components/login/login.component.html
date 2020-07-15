@@ -1,80 +1,116 @@
 <div class="content">
-    <div class="flex-container">
-      <img src="/assets/img/exer.png" alt="image">
-      <div class='right-content'>
-        <h1>Welcome to Fitness w/ Friends @ IBM</h1>
-        <div class="subtext">
-          <h3>Exercise and Socialize Safely during Quarantine Times</h3>
-            <div class="buttons">
-              <div *ngIf ="!truthVariable">
-              <button mat-raised-button (click)="this.changeVariable()" class="blue-button">LOGIN</button>
-              <button mat-raised-button (click)="this.changeExtraVariable()" color="basic" >REGISTER</button>
-            </div>
-            <div *ngIf ="truthVariable">
-              <div *ngIf = "extraVariable">
-                <form name="loginForm" [formGroup]= "loginForm" class="login-form">
-                  <mat-form-field appearance="outline" class="field">
+  <div class="flex-container">
+    <img src="/assets/img/exer.png" alt="image">
+    <div class='right-content'>
+      <h1>Welcome to Fitness w/ Friends @ IBM</h1>
+      <div class="subtext">
+        <h3>Exercise and Socialize Safely during Quarantine Times</h3>
+        <div *ngIf="!truthVariable" class="buttons">
+          <button mat-raised-button (click)="this.changeVariable()" class="blue-button">LOGIN</button>
+          <button mat-raised-button (click)="this.changeExtraVariable()" color="basic">REGISTER</button>
+        </div>
+      </div>
+      <div *ngIf="truthVariable">
+        <div *ngIf="extraVariable">
+          <form name="loginForm" [formGroup]="loginForm" class="login-form">
+            <table>
+              <tbody>
+                <tr>
+                  <td>
+                    <mat-form-field appearance="outline" class="field">
                       <mat-label>Email</mat-label>
                       <input matInput formControlName="email">
                       <mat-icon matSuffix>person_outline</mat-icon>
                       <!-- <mat-error>
-                          Email is required for login
-                      </mat-error> -->
-                  </mat-form-field>
-                  <mat-form-field appearance="outline" class="field">
-                    <mat-label>Password</mat-label>
-                    <input matInput type="password" formControlName="password">
-                    <mat-icon matSuffix class="secondary-text">lock</mat-icon>
-                    <!-- <mat-error>
-                        Password is required for login
-                    </mat-error> -->
-                  </mat-form-field>
-                </form>
-                <button mat-raised-button class="blue-button login-button" (click) = "loginSubmitForm()" aria-label="LOG IN">
-                    LOG IN
-                </button>
-              </div>
+                                  Email is required for login
+                              </mat-error> -->
+                    </mat-form-field>
+                  </td>
+                  <td>
+                    <mat-form-field appearance="outline" class="field">
+                      <mat-label>Password</mat-label>
+                      <input matInput type="password" formControlName="password">
+                      <mat-icon matSuffix class="secondary-text">lock</mat-icon>
+                      <!-- <mat-error>
+                                Password is required for login
+                            </mat-error> -->
+                    </mat-form-field>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <button mat-button (click)="goBack()"> Back </button>
+                  </td>
+                  <td>
+                    <button mat-raised-button class="blue-button login-button" (click)="loginSubmitForm()" aria-label="LOG IN">
+                      LOG IN
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
 
-              <div *ngIf= "!extraVariable">
-                <form name="registerForm" [formGroup]= "registerForm" class="login-form">
-                  <mat-form-field appearance="outline" class="field">
+          </form>
+        </div>
+      </div>
+
+      <div *ngIf="!extraVariable">
+        <form name="registerForm" [formGroup]="registerForm" class="registerForm">
+          <table>
+            <tbody>
+              <tr>
+                <td>
+                  <mat-form-field appearance="outline">
                     <mat-label>First Name</mat-label>
                     <input matInput formControlName="firstNameOne">
                     <mat-icon matSuffix>person_outline</mat-icon>
                   </mat-form-field>
-                  <mat-form-field appearance="outline" class="field">
+                </td>
+                <td>
+                  <mat-form-field appearance="outline">
                     <mat-label>Last Name</mat-label>
                     <input matInput formControlName="lastNameOne">
                     <mat-icon matSuffix>person_outline</mat-icon>
                   </mat-form-field>
-                  <mat-form-field appearance="outline" class="field">
-                      <mat-label>Email</mat-label>
-                      <input matInput formControlName="emailOne">
-                      <mat-icon matSuffix>person_outline</mat-icon>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <mat-form-field appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input matInput formControlName="emailOne">
+                    <mat-icon matSuffix>person_outline</mat-icon>
                   </mat-form-field>
-                  <mat-form-field appearance="outline" class="field">
+                </td>
+                <td>
+                  <mat-form-field appearance="outline">
                     <mat-label>Password</mat-label>
                     <input matInput type="password" formControlName="passwordOne">
                     <mat-icon matSuffix class="secondary-text">lock</mat-icon>
                     <mat-error>
-                        Password is required
+                      Password is required
                     </mat-error>
                   </mat-form-field>
-                </form>
-                <button (click)="newRegistrationClick()" mat-button> Submit</button>
-              </div>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <button mat-button (click)="goBack()"> Back </button>
+                </td>
+                <td>
+                  <button (click)="newRegistrationClick()" mat-button class="blue-button"> Submit</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </form>
 
-
-
-
-
-
-
-
-              <button mat-button (click)="goBack()"> Back </button>
-            </div>
-          </div>
-        </div>
       </div>
+
+
+
+    </div>
+
+
   </div>
 </div>
