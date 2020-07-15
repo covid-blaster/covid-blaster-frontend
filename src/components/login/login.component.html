@@ -7,17 +7,17 @@
           <h3>Exercise and Socialize Safely during Quarantine Times</h3>
             <div class="buttons">
               <div *ngIf ="!truthVariable">
-              <button mat-raised-button (click)="this.changeVariable()" class="blue-button">Login</button>
-              <button mat-raised-button color="basic" >Register</button>
+              <button mat-raised-button (click)="this.changeVariable()" class="blue-button">LOGIN</button>
+              <button mat-raised-button color="basic" >REGISTER</button>
             </div>
-              <div *ngIf ="truthVariable">
-              <form name="loginForm" [formGroup]="loginForm" >
-                <mat-form-field appearance="outline">
+              <div *ngIf ="truthVariable" >
+              <form name="loginForm" [formGroup]="loginForm" class='login-form'>
+                <mat-form-field appearance="outline" class='field'>
                     <mat-label>Email</mat-label>
                     <input matInput formControlName="email">
                     <mat-icon matSuffix>person_outline</mat-icon>
                 </mat-form-field>
-                <mat-form-field appearance="outline">
+                <mat-form-field appearance="outline" class='field'>
                   <mat-label>Password</mat-label>
                   <input matInput type="password" formControlName="password">
                   <mat-icon matSuffix class="secondary-text">lock</mat-icon>
@@ -26,9 +26,7 @@
                   </mat-error>
               </mat-form-field>
               </form>
-
-
-              <button mat-raised-button color="primary" class="submit-button" (click) = "loginSubmitForm()" aria-label="LOG IN">
+              <button mat-raised-button color="primary" class="login-button blue-button" (click) = "loginSubmitForm()" aria-label="LOG IN">
                   LOG IN
               </button>
             </div>
@@ -37,6 +35,3 @@
       </div>
   </div>
 </div>
-
-
-
