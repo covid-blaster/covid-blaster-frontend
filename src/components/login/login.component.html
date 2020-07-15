@@ -8,27 +8,33 @@
             <div class="buttons">
               <div *ngIf ="!truthVariable">
               <button mat-raised-button (click)="this.changeVariable()" class="blue-button">LOGIN</button>
-              <button mat-raised-button color="basic" >REGISTER</button>
+              <button mat-raised-button (click)="this.changeExtraVariable()" color="basic" >REGISTER</button>
             </div>
-              <div *ngIf ="truthVariable" >
-              <form name="loginForm" [formGroup]="loginForm" class='login-form'>
-                <mat-form-field appearance="outline" class='field'>
-                    <mat-label>Email</mat-label>
-                    <input matInput formControlName="email">
-                    <mat-icon matSuffix>person_outline</mat-icon>
-                </mat-form-field>
-                <mat-form-field appearance="outline" class='field'>
-                  <mat-label>Password</mat-label>
-                  <input matInput type="password" formControlName="password">
-                  <mat-icon matSuffix class="secondary-text">lock</mat-icon>
-                  <mat-error>
-                      Password is required
-                  </mat-error>
-              </mat-form-field>
-              </form>
-              <button mat-raised-button color="primary" class="login-button blue-button" (click) = "loginSubmitForm()" aria-label="LOG IN">
-                  LOG IN
-              </button>
+            <div *ngIf ="truthVariable">
+              <div *ngIf = "extraVariable">
+                <form name="loginForm" [formGroup]="loginForm" class="login-form">
+                  <mat-form-field appearance="outline" class="field">
+                      <mat-label>Email</mat-label>
+                      <input matInput formControlName="email">
+                      <mat-icon matSuffix>person_outline</mat-icon>
+                  </mat-form-field>
+                  <mat-form-field appearance="outline" class="field">
+                    <mat-label>Password</mat-label>
+                    <input matInput type="password" formControlName="password">
+                    <mat-icon matSuffix class="secondary-text">lock</mat-icon>
+                    <mat-error>
+                        Password is required
+                    </mat-error>
+                  </mat-form-field>
+                </form>
+                <button mat-raised-button class="blue-button login-button" (click) = "loginSubmitForm()" aria-label="LOG IN">
+                    LOG IN
+                </button>
+              </div>
+
+              <div *ngIf= "!extraVariable">
+                <h1>Register Form</h1>
+              </div>
             </div>
           </div>
         </div>
