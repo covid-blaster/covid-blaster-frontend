@@ -6,8 +6,11 @@
         <div class="subtext">
           <h3>Exercise and Socialize Safely during Quarantine Times</h3>
             <div class="buttons">
-              <!-- <button mat-raised-button class="blue-button">Login</button>
-              <button mat-raised-button color="basic" >Register</button> -->
+              <div *ngIf ="!truthVariable">
+              <button mat-raised-button (click)="this.changeVariable()" class="blue-button">Login</button>
+              <button mat-raised-button color="basic" >Register</button>
+            </div>
+              <div *ngIf ="truthVariable">
               <form name="loginForm" [formGroup]="loginForm" >
                 <mat-form-field appearance="outline">
                     <mat-label>Email</mat-label>
@@ -28,6 +31,7 @@
               <button mat-raised-button color="primary" class="submit-button" (click) = "loginSubmitForm()" aria-label="LOG IN">
                   LOG IN
               </button>
+            </div>
           </div>
         </div>
       </div>

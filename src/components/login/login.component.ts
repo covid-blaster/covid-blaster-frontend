@@ -8,6 +8,7 @@ import { FormGroup, FormBuilder, Validators, FormsModule } from '@angular/forms'
 })
 export class LoginComponent implements OnInit {
 
+  truthVariable:boolean;
   loginForm: FormGroup;
   constructor(
     private formBuilder: FormBuilder,
@@ -15,6 +16,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     this.buildForm();
+    this.truthVariable = false;
   }
 
   private buildForm() {
@@ -27,7 +29,10 @@ export class LoginComponent implements OnInit {
   loginSubmitForm() {
     console.log(this.loginForm.value.email);
     console.log(this.loginForm.value.password);
+  }
 
+  changeVariable() {
+    this.truthVariable = true;
   }
 
 }
