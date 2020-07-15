@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, Validators, FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-groups',
@@ -6,10 +7,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./groups.component.css']
 })
 export class GroupsComponent implements OnInit {
+  dataset = ['MDB', 'Angular', 'Bootstrap', 'Framework', 'SPA', 'React', 'Vue'];
+  createGroupForm: FormGroup;
+  constructor(
+    private formBuilder: FormBuilder,
 
-  constructor() { }
+  ) { }
 
   ngOnInit() {
+    this.createGroupFormMethod();
   }
+
+  private createGroupFormMethod() {
+
+    this.createGroupForm = this.formBuilder.group({
+      groupName: ['', Validators.required]
+    });
+  }
+
 
 }

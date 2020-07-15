@@ -14,8 +14,27 @@ h1 {
 h3 {
   font-size: 2em;
   font-weight: bold;
+  padding: 0.5em
 }
 
+td {
+  padding: 0em 8em 0em 2em;
+  text-align: left;
+}
+
+th {
+  padding: 0em 8em 0em 2em;
+  text-align: center;
+}
 .container {
   margin: 2em
+}
+
+.fab{
+    height: 6em !important;
+    width: 6em !important;
+    font-size: 1em !important;
+    background-color: #17394f;
+    white-space: pre-wrap;
+    color: white
 }
