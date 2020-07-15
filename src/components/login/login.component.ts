@@ -7,7 +7,6 @@ import { FormGroup, FormBuilder, Validators, FormsModule } from '@angular/forms'
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
   extraVariable:boolean;
   truthVariable:boolean;
   loginForm: FormGroup;
@@ -19,6 +18,7 @@ export class LoginComponent implements OnInit {
     this.buildForm();
     this.truthVariable = false;
     this.extraVariable = true;
+
   }
 
   private buildForm() {
@@ -40,6 +40,7 @@ export class LoginComponent implements OnInit {
   changeExtraVariable() {
     this.truthVariable = true;
     this.extraVariable = false;
+
   }
 
 }
