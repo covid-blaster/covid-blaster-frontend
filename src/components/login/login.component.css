@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+
+/* https://www.w3schools.com/howto/howto_css_center-vertical.asp */
+.content {
+  font-family: 'Montserrat';
+  margin: 0;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  -ms-transform: translate(-40%, -40%);
+  transform: translate(-40%, -40%);
+
+}
+
+h1 {
+  font-size: 3em; /* 40px/16=2.5em */
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+
+.flex-container {
+  display: flex;
+}
+
+.tp-button-row button,
+.tp-button-row a {
+   margin-right: 8px;
+}
+
+.right-content {
+margin-top: 5em
+}
+
+.blue-button {
+  background-color: #17394f;
+  color: white
+}
+
+.subtext {
+  display: flex;
+  justify-content: center;
+}
+
+.buttons {
+  margin-top: 2em;
+  font-size: 2em;
+  position: fixed;
+}
+
+button{
+    height: 2em !important;
+    font-size: 1em !important;
+    margin: 0.5em 2em
+}
