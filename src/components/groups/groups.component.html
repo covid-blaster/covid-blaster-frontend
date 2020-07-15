@@ -2,11 +2,63 @@
   <h1>
     Find a Group
   </h1>
+
   <h3>
     Create a Group
   </h3>
 
+
+  <form name="loginForm" [formGroup]="createGroupForm" class="create-group">
+    <table>
+      <thead>
+        <tr>
+          <th>Group name</th>
+          <th>Members</th>
+          <th>Exercise Plan</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <mat-form-field appearance="outline" class="field">
+              <mat-label>Enter your group's name</mat-label>
+              <input matInput formControlName="groupName">
+
+            </mat-form-field>
+          </td>
+          <td>
+            <mat-form-field appearance="fill">
+              <mat-label>Add friends</mat-label>
+              <mat-select>
+                <mat-option value="option1">Option 1</mat-option>
+                <mat-option value="option2">Option 2</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </td>
+          <td>
+            <mat-form-field appearance="fill">
+              <mat-label>Add Exercise Plan</mat-label>
+              <mat-select>
+                <mat-option value="option1">Option 1</mat-option>
+                <mat-option value="option2">Option 2</mat-option>
+              </mat-select>
+              <mat-hint>Optional</mat-hint>
+            </mat-form-field>
+          </td>
+          <td>
+            <button mat-fab class="fab" aria-label="CREATE">
+                CREATE GROUP
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </form>
+
+
+
   <h3>
-    Join an Existing Group
+    Or Join an Existing Group
   </h3>
 </div>
