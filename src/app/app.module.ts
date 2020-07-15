@@ -1,3 +1,4 @@
+import { MaterialModule } from './../modules/material.module';
 import { LoginComponent } from './../components/login/login.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -13,7 +14,8 @@ import { MatButtonModule } from '@angular/material/button';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatButtonModule
+    MatButtonModule,
+    MaterialModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
