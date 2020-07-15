@@ -1,0 +1,210 @@
+// Media step breakpoint mixin based on Angular Material lib
+$breakpoints: (
+    xs: 'screen and (max-width: 599px)',
+    sm: 'screen and (min-width: 600px) and (max-width: 959px)',
+    md: 'screen and (min-width: 960px) and (max-width: 1279px)',
+    lg: 'screen and (min-width: 1280px) and (max-width: 1919px)',
+    xl: 'screen and (min-width: 1920px) and (max-width: 5000px)',
+    lt-sm: 'screen and (max-width: 599px)',
+    lt-md: 'screen and (max-width: 959px)',
+    lt-lg: 'screen and (max-width: 1279px)',
+    lt-xl: 'screen and (max-width: 1919px)',
+    gt-xs: 'screen and (min-width: 600px)',
+    gt-sm: 'screen and (min-width: 960px)',
+    gt-md: 'screen and (min-width: 1280px)',
+    gt-lg: 'screen and (min-width: 1920px)'
+) !default;
+
+// Re-map the breakpoints for the helper classes
+$helper-breakpoints: (
+    xs: null,
+    sm: 'gt-xs',
+    md: 'gt-sm',
+    lg: 'gt-md',
+    xl: 'gt-lg'
+);
+
+@mixin media-breakpoint($breakpointName) {
+
+    $mediaQuery: map-get($breakpoints, $breakpointName);
+
+    @if ($mediaQuery == null) {
+        @content
+    } @else {
+        @media #{$mediaQuery} {
+            @content
+        }
+    }
+}
+
+#login {
+        height: 100vh;
+        width: 100%;
+        background: black;
+        background-size: cover;
+
+        #login-form-wrapper {
+            flex: 1 0 auto;
+            padding: 32px;
+
+            @include media-breakpoint('xs') {
+                padding: 16px;
+            }
+
+            #login-form {
+                background: white;
+                width: 384px;
+                max-width: 384px;
+                padding: 32px;
+                text-align: center;
+
+                @include media-breakpoint('xs') {
+                    padding: 24px;
+                    width: 100%;
+                }
+
+                .logo {
+                    width: 128px;
+                    margin: 32px auto;
+                    font-weight: bold;
+                }
+
+                .title {
+                    font-size: 20px;
+                    margin: 16px 0 32px 0;
+                    font-family: "Muli", "Helvetica Neue", "Arial", sans-serif;
+                    font-weight: bold;
+                }
+
+                form {
+                    width: 100%;
+                    text-align: left;
+
+                    mat-form-field {
+                        width: 100%;
+                    }
+
+                    mat-checkbox {
+                        margin: 0;
+                    }
+
+                    .remember-forgot-password {
+                        font-size: 13px;
+                        margin-top: 8px;
+
+                        .remember-me {
+                            margin-bottom: 16px
+                        }
+
+                        .forgot-password {
+                            font-size: 13px;
+                            font-weight: 600;
+                            margin-bottom: 16px
+                        }
+                    }
+
+                    .submit-button {
+                      width: 320px;
+                      margin: 16px auto;
+                      display: block;
+                      background-color: black;
+                      color: white;
+                      font-weight: bold;
+                      @include media-breakpoint('xs') {
+                          width: 90%;
+                        }
+                    }
+                }
+
+                .register {
+                    margin: 32px auto 24px auto;
+                    font-weight: 600;
+
+                    .text {
+                        margin-right: 8px;
+                    }
+                }
+
+                .separator {
+                    font-size: 15px;
+                    font-weight: 600;
+                    margin: 24px auto;
+                    position: relative;
+                    overflow: hidden;
+                    width: 100px;
+
+                    .text {
+                        display: inline-flex;
+                        position: relative;
+                        padding: 0 8px;
+                        z-index: 9999;
+
+                        &:before,
+                        &:after {
+                            content: '';
+                            display: block;
+                            width: 30px;
+                            position: absolute;
+                            top: 10px;
+                            border-top: 1px solid;
+                        }
+
+                        &:before {
+                            right: 100%;
+                        }
+
+                        &:after {
+                            left: 100%;
+                        }
+                    }
+                }
+
+                button {
+
+                    &.google,
+                    &.facebook {
+                        width: 192px;
+                        text-transform: none;
+                        color: #FFFFFF;
+                        font-size: 13px;
+                    }
+
+                    @include media-breakpoint('xs') {
+                        width: 80%;
+                    }
+
+                    &.google {
+                        background-color: #D73D32;
+                        margin-bottom: 8px;
+                    }
+
+                    &.facebook {
+                        background-color: rgb(63, 92, 154);
+                    }
+                }
+            }
+        }
+    }
+
+    .preview-image {
+      height: 130px;
+      width: 130px;
+      border-radius: 50% !important;
+      text-align: center !important;
+      margin: 35px 0px 20px 0px;
+    }
+
+    .divideForm {
+      margin: 50px;
+    }
+
+    .text {
+      font-family: "Muli", "Helvetica Neue", "Arial", sans-serif;
+    }
+
+    .link {
+      font-family: "Muli", "Helvetica Neue", "Arial", sans-serif;
+      color: rgb(3, 155, 229);
+      cursor: pointer;
+      margin-top: 10px;
+    }
