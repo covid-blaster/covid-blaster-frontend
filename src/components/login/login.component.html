@@ -12,7 +12,7 @@
             </div>
             <div *ngIf ="truthVariable">
               <div *ngIf = "extraVariable">
-                <form name="loginForm" [formGroup]="loginForm" class="login-form">
+                <form name="loginForm" [formGroup]= "loginForm" class="login-form">
                   <mat-form-field appearance="outline" class="field">
                       <mat-label>Email</mat-label>
                       <input matInput formControlName="email">
@@ -33,8 +33,40 @@
               </div>
 
               <div *ngIf= "!extraVariable">
-                <h1>Register Form</h1>
+                <form name="registerForm" [formGroup]= "registerForm" class="login-form">
+                  <mat-form-field appearance="outline" class="field">
+                    <mat-label>First Name</mat-label>
+                    <input matInput formControlName="firstNameOne">
+                    <mat-icon matSuffix>person_outline</mat-icon>
+                  </mat-form-field>
+                  <mat-form-field appearance="outline" class="field">
+                    <mat-label>Last Name</mat-label>
+                    <input matInput formControlName="lastNameOne">
+                    <mat-icon matSuffix>person_outline</mat-icon>
+                  </mat-form-field>
+                  <mat-form-field appearance="outline" class="field">
+                      <mat-label>Email</mat-label>
+                      <input matInput formControlName="emailOne">
+                      <mat-icon matSuffix>person_outline</mat-icon>
+                  </mat-form-field>
+                  <mat-form-field appearance="outline" class="field">
+                    <mat-label>Password</mat-label>
+                    <input matInput type="password" formControlName="passwordOne">
+                    <mat-icon matSuffix class="secondary-text">lock</mat-icon>
+                    <mat-error>
+                        Password is required
+                    </mat-error>
+                  </mat-form-field>
+                </form>
+                <button (click)="newRegistrationClick()" mat-button> Submit</button>
               </div>
+
+
+
+
+
+
+
 
               <button mat-button (click)="goBack()"> Back </button>
             </div>
