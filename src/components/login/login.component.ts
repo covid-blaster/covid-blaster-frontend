@@ -24,4 +24,10 @@ export class LoginComponent implements OnInit {
     });
   }
 
+  loginSubmitForm() {
+    console.log(this.loginForm.value.email);
+    console.log(this.loginForm.value.password);
+
+  }
+
 }

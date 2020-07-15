@@ -6,9 +6,29 @@
         <div class="subtext">
           <h3>Exercise and Socialize Safely during Quarantine Times</h3>
             <div class="buttons">
-              <button mat-raised-button class="blue-button">Login</button>
-              <button mat-raised-button color="basic" >Register</button>
-            </div>
+              <!-- <button mat-raised-button class="blue-button">Login</button>
+              <button mat-raised-button color="basic" >Register</button> -->
+              <form name="loginForm" [formGroup]="loginForm" >
+                <mat-form-field appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input matInput formControlName="email">
+                    <mat-icon matSuffix>person_outline</mat-icon>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                  <mat-label>Password</mat-label>
+                  <input matInput type="password" formControlName="password">
+                  <mat-icon matSuffix class="secondary-text">lock</mat-icon>
+                  <mat-error>
+                      Password is required
+                  </mat-error>
+              </mat-form-field>
+              </form>
+
+
+              <button mat-raised-button color="primary" class="submit-button" (click) = "loginSubmitForm()" aria-label="LOG IN">
+                  LOG IN
+              </button>
+          </div>
         </div>
       </div>
   </div>
