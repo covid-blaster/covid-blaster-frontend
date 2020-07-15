@@ -43,4 +43,8 @@ export class LoginComponent implements OnInit {
 
   }
 
+  goBack() {
+    this.truthVariable = false;
+    this.extraVariable = true;
+  }
 }
