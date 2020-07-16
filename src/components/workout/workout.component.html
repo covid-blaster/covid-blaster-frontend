@@ -1,0 +1,50 @@
+<div class="pick-type">
+  <div>
+    <label>Pick a Workout Type</label>
+    <mat-radio-group class="exercise-types" [(ngModel)]="chosenexe">
+      <mat-radio-button *ngFor="let exercise of exercises" [value]="exercise">
+        {{exercise}}
+      </mat-radio-button>
+    </mat-radio-group>
+  </div>
+
+  <div class="workout-details">
+    <div *ngIf='chosenexe === "Cardio"'>
+      <mat-form-field appearance="outline">
+        <mat-label>Description</mat-label>
+        <input matInput>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Duration</mat-label>
+        <mat-select>
+          <mat-option *ngFor="let time of times" [value]="time">
+            {{time}}
+            </mat-option>
+        </mat-select>
+        <mat-hint>Minutes</mat-hint>
+      </mat-form-field>
+      <button mat-button class="blue-button"> Submit </button>
+    </div>
+    <div *ngIf='chosenexe === "Strength"'>
+      <mat-form-field appearance="outline">
+        <mat-label>Description</mat-label>
+        <input matInput>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Sets</mat-label>
+        <input matInput>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Weight</mat-label>
+        <input matInput>
+        <mat-hint>Pounds</mat-hint>
+      </mat-form-field>
+      <button mat-button class="blue-button"> Submit </button>
+    </div>
+
+  </div>
+
+</div>

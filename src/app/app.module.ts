@@ -2,18 +2,22 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from './../modules/material.module';
 import { LoginComponent } from './../components/login/login.component';
 import { GroupsComponent } from './../components/groups/groups.component';
+import { ExcercisePlanComponent } from './../components/excercisePlan/excercisePlan.component';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA} from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MatButtonModule } from '@angular/material/button';
-
+import { MatRadioModule } from '@angular/material/radio';
+import { WorkoutComponent } from '../components/workout/workout.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    GroupsComponent
+    GroupsComponent,
+    ExcercisePlanComponent,
+    WorkoutComponent,
   ],
   imports: [
     BrowserModule,
@@ -24,6 +28,7 @@ import { MatButtonModule } from '@angular/material/button';
     ReactiveFormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [ AppComponent ],
+  schemas: [ NO_ERRORS_SCHEMA ]
 })
 export class AppModule { }
