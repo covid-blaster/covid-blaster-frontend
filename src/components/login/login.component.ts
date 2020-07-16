@@ -23,7 +23,9 @@ export class LoginComponent implements OnInit {
     this.buildForm();
     this.truthVariable = false;
     this.extraVariable = true;
-    this.http.get("http://dummy.restapiexample.com/api/v1/employees").subscribe(res => console.log(res));
+    this.http.get("https://covid-blasters-app.us-east.cf.appdomain.cloud/health").subscribe(res => console.log(res));
+
+    //http://dummy.restapiexample.com/api/v1/employees
   }
 
   private buildForm() {
