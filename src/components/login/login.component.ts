@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, FormsModule } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
+import { Observable, throwError } from 'rxjs';
+import { catchError, retry } from 'rxjs/operators';
 
 @Component({
   selector: 'app-login',
@@ -13,13 +16,14 @@ export class LoginComponent implements OnInit {
   registerForm: FormGroup;
   constructor(
     private formBuilder: FormBuilder,
+    private http: HttpClient
   ) { }
 
   ngOnInit() {
     this.buildForm();
     this.truthVariable = false;
     this.extraVariable = true;
-
+    this.http.get("http://dummy.restapiexample.com/api/v1/employees").subscribe(res => console.log(res));
   }
 
   private buildForm() {
