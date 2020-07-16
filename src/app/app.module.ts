@@ -25,6 +25,7 @@ import { HttpClientModule } from '@angular/common/http';
     WorkoutComponent,
     FeedPageComponent,
     AddPostDialogComponent,
+    FeedPageComponent
   ],
   imports: [
     BrowserModule,
