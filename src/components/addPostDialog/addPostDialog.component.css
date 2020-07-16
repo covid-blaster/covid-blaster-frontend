@@ -1,0 +1,6 @@
+.example-full-width {
+  min-width: 40em;
+  /* min-height: 200em; */
+  width: 100%;
+  /* height: 100% */
+}

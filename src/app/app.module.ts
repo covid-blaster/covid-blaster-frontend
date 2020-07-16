@@ -3,6 +3,7 @@ import { MaterialModule } from './../modules/material.module';
 import { LoginComponent } from './../components/login/login.component';
 import { GroupsComponent } from './../components/groups/groups.component';
 import { ExcercisePlanComponent } from './../components/excercisePlan/excercisePlan.component';
+import { AddPostDialogComponent } from './../components/addPostDialog/addPostDialog.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, NO_ERRORS_SCHEMA} from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
@@ -22,7 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
     GroupsComponent,
     ExcercisePlanComponent,
     WorkoutComponent,
-    FeedPageComponent
+    FeedPageComponent,
+    AddPostDialogComponent,
   ],
   imports: [
     BrowserModule,
