@@ -24,7 +24,6 @@ export class LoginComponent implements OnInit {
     this.truthVariable = false;
     this.extraVariable = true;
     this.http.get("https://covid-blasters-app.us-east.cf.appdomain.cloud/health").subscribe(res => console.log(res));
-
     //http://dummy.restapiexample.com/api/v1/employees
   }
 
