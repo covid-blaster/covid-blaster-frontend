@@ -22,6 +22,10 @@
 .conversation-header h2, .conversation-header p {
     align-items: center;
     display: flex;
+    height: 3em;
+    font-size: 2em;
+    margin-left: 1em;
+    margin-top: 0.5em
 }
 
 .text-center {
@@ -49,9 +53,12 @@
 }
 
 .mat-card {
-    height: 100%;
-    padding: 0 24px;
+    position: relative;
+    object-fit: contain;
+    padding: 1em 4em;
     overflow: scroll;
+    width: 100%;
+    font-size: 1.5em
 }
 .conversation-input {
     position: absolute;
@@ -79,4 +86,32 @@ section .mat-list .mat-list-avatar{
 
 .full-width .mat-icon {
     cursor: pointer;
+    transform: scale(2);
+}
+
+.post-input {
+  margin: 0em 3em;
+  width: 90%;
+}
+
+.posts {
+  flex-direction: column;
+
+}
+
+.col-1 {
+  margin-top: 20em;
+  width: 90%;
+}
+
+.post {
+  margin-bottom: 2em;
+  float: left;
+  flex-direction: column;
+  overflow-y: hidden;
+}
+
+.inside-post {
+  float:left;
+  margin-right: 1em
 }

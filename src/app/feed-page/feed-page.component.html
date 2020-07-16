@@ -31,22 +31,37 @@
     <section *ngIf="!selectedConversation">
       <div class="mat-typography conversation-header">
         <p>
-          <mat-icon>account_circle</mat-icon>
-           posts</p>
+          <!-- <mat-icon  >account_circle</mat-icon> -->
+           Fitness Feed</p>
       </div>
-  
+
       <mat-divider></mat-divider>
       <mat-list dense class="conversation-history mat-typography">
-        <mat-list-item  >
-          
-            post
+        <mat-list-item>
+          <div class="col-1">
+            <mat-card class="post">
+            <mat-icon  class="inside-post">account_circle</mat-icon>
+            <h3> Courtney Bryant</h3>
+            Just finshed a 1 mile run for the "Marathoner's group"
+            Just finshed a 1 mile run for the "Marathoner's group"Just finshed a 1 mile run for the "Marathoner's group"
+            Just finshed a 1 mile run for the "Marathoner's group"Just finshed a 1 mile run for the "Marathoner's group"
+            Just finshed a 1 mile run for the "Marathoner's group"
+          </mat-card>
+          <mat-card class="post">
+          <mat-icon  class="inside-post">account_circle</mat-icon>
+          <h3> Courtney Bryant</h3>
+          Just finshed a 1 mile run for the "Marathoner's group"
+          Just finshed a 1 mile run for the "Marathoner's group"Just finshed a 1 mile run for the "Marathoner's group"
+          Just finshed a 1 mile run for the "Marathoner's group"Just finshed a 1 mile run for the "Marathoner's group"
+          Just finshed a 1 mile run for the "Marathoner's group"
+        </mat-card></div>
         </mat-list-item>
       </mat-list>
-  
+
       <div class="conversation-input">
         <mat-divider></mat-divider>
-        <mat-form-field class="full-width">
-          <input matInput placeholder="making post" name="text" [(ngModel)]="text">
+        <mat-form-field class="full-width post-input">
+          <input matInput placeholder="Share a recent workout" name="text" [(ngModel)]="text">
           <mat-icon matSuffix >send</mat-icon>
         </mat-form-field>
       </div>
