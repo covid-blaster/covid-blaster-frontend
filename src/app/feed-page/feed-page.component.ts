@@ -40,6 +40,8 @@ export class FeedPageComponent implements OnInit {
   }
   onAddGroup() {
     this.router.navigateByUrl('/groups')
+    console.log("well we tried renavigating");
+
   }
 
 }
