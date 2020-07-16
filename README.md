@@ -2,8 +2,7 @@
 
 Fitness with Friends at IBM is a web app that currently uses Angular to run locally. Once the server is connected as per instructions below, the app will begin at startup:
 
-![Landing](landing.png)
-<img src="landing.png" width="200" >
+<img src="landing.png" width="300" >
 
 
 To start, run `npm install`
