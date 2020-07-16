@@ -73,6 +73,6 @@ export class LoginComponent implements OnInit {
   }
 
   registerClick() {
-    this.router.navigateByUrl("/groups");
+    this.router.navigateByUrl('/groups');
   }
 }

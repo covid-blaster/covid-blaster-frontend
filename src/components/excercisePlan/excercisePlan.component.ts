@@ -42,7 +42,7 @@ export class ExcercisePlanComponent implements OnInit {
   }
 
   changeRoute() {
-    this.router.navigateByUrl("/feedPage");
+    this.router.navigateByUrl('/feedPage');
   }
 
 }

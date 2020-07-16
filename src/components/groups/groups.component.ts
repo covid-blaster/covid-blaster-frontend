@@ -27,7 +27,7 @@ export class GroupsComponent implements OnInit {
   }
 
   changeRoute() {
-    this.router.navigateByUrl("/excercisePlan")
+    this.router.navigateByUrl('/excercisePlan')
   }
 
 
