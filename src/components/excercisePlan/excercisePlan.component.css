@@ -47,5 +47,6 @@ mat-form-field {
 .blue-button {
   background-color: #17394f;
   color: white;
-  margin-left: 4em
+  margin: 2em;
+  font-size: 1.5em
 }
