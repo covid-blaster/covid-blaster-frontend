@@ -48,7 +48,6 @@
     </section>
     <section *ngIf="!selectedConversation">
       <div class="mat-typography conversation-header">
-
            Fitness Feed
            <button (click)= "onAddPostClick()" mat-button class="add-post">Add Post </button>
 
@@ -126,7 +125,7 @@
     </mat-list>
 
     <div class="conversation-input">
-      <mat-divider></mat-divider>
+      <!-- <mat-divider></mat-divider> -->
       <mat-form-field class="full-width post-input" *ngIf="selectedConversation">
         <input matInput placeholder="Share a recent workout" name="text" [(ngModel)]="text">
         <mat-icon matSuffix>send</mat-icon>
