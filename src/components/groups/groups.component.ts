@@ -7,7 +7,6 @@ import { FormGroup, FormBuilder, Validators, FormsModule } from '@angular/forms'
   styleUrls: ['./groups.component.css']
 })
 export class GroupsComponent implements OnInit {
-  dataset = ['MDB', 'Angular', 'Bootstrap', 'Framework', 'SPA', 'React', 'Vue'];
   createGroupForm: FormGroup;
   constructor(
     private formBuilder: FormBuilder,
