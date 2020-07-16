@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-groups',
@@ -10,6 +11,7 @@ export class GroupsComponent implements OnInit {
   createGroupForm: FormGroup;
   constructor(
     private formBuilder: FormBuilder,
+    private router: Router
 
   ) { }
 
@@ -22,6 +24,10 @@ export class GroupsComponent implements OnInit {
     this.createGroupForm = this.formBuilder.group({
       groupName: ['', Validators.required]
     });
+  }
+
+  changeRoute() {
+    this.router.navigateByUrl("/excercisePlan")
   }
 
 
