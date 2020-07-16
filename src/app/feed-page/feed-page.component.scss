@@ -19,7 +19,7 @@
     height: 100%;
 }
 
-.conversation-header h2, .conversation-header p {
+.conversation-header {
     align-items: center;
     display: flex;
     height: 3em;
@@ -140,4 +140,12 @@ ul {
 
 li {
   padding: 0.5em
+}
+
+
+.add-post {
+  float: right;
+  margin-left: 45em;
+  background-color: #17394f;
+  color: white
 }

@@ -48,10 +48,11 @@
     </section>
     <section *ngIf="!selectedConversation">
       <div class="mat-typography conversation-header">
-        <p>
-          <!-- <mat-icon  >account_circle</mat-icon> -->
-           Fitness Feed</p>
-           <button (click)= "onAddPostClick()" mat-button>Add Post </button>
+
+           Fitness Feed
+           <button (click)= "onAddPostClick()" mat-button class="add-post">Add Post </button>
+
+
       </div>
 
       <mat-divider></mat-divider>
