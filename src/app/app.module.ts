@@ -10,6 +10,8 @@ import { AppComponent } from './app.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatRadioModule } from '@angular/material/radio';
 import { WorkoutComponent } from '../components/workout/workout.component';
+import { FeedPageComponent } from './feed-page/feed-page.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,7 @@ import { WorkoutComponent } from '../components/workout/workout.component';
     GroupsComponent,
     ExcercisePlanComponent,
     WorkoutComponent,
+    FeedPageComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +28,8 @@ import { WorkoutComponent } from '../components/workout/workout.component';
     MatButtonModule,
     MaterialModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [ AppComponent ],
