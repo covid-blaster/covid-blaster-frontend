@@ -12,6 +12,8 @@ import { MatRadioModule } from '@angular/material/radio';
 import { WorkoutComponent } from '../components/workout/workout.component';
 import { FeedPageComponent } from './feed-page/feed-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -29,7 +31,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [ AppComponent ],
