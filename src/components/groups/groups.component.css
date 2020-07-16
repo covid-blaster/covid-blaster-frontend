@@ -21,7 +21,10 @@ h3 {
 td {
   padding: 0em 8em 0em 2em;
   text-align: left;
+
 }
+
+
 
 th {
   padding: 0em 8em 0em 2em;
@@ -41,4 +44,23 @@ th {
     background-color: #17394f;
     white-space: pre-wrap;
     color: white
+}
+
+
+.group-card {
+  margin: 2em;
+  max-width: 100%;
+}
+
+
+.plans {
+  font-size: 2em
+}
+
+li {
+  font-size: 1.5em
+}
+
+.search {
+  font-size: 1.5em
 }
