@@ -1,4 +1,4 @@
-<mat-card>jello</mat-card>
+<mat-card></mat-card>
 <mat-sidenav-container class="container">
     <mat-sidenav mode="side" opened>
       <mat-card>
@@ -9,22 +9,40 @@
             </ng-template>
             <mat-list class="conversations">
               <mat-list-item >
-                <p>left panel</p>
+                <h2>Exercise Groups</h2>
               </mat-list-item>
             </mat-list>
           </mat-tab>
         </mat-tab-group>
       </mat-card>
+      <ul>
+        <li>Marathoners</li>
+        <li>Covid-Blasters</li>
+        <li>Happy Yogis</li>
+      </ul>
     </mat-sidenav>
-    <mat-sidenav position="end" mode="side" opened >
+    <mat-sidenav position="end" mode="side" opened>
       <mat-card>
-        <mat-list class="members">
-          <mat-list-item >
-            <p>right panel</p>
-          </mat-list-item>
-        </mat-list>
+        <mat-tab-group>
+          <mat-tab>
+            <ng-template mat-tab-label>
+              <mat-icon matListIcon>list</mat-icon>
+            </ng-template>
+            <mat-list class="members">
+              <mat-list-item >
+                <h2>Plans</h2>
+              </mat-list-item>
+            </mat-list>
+          </mat-tab>
+        </mat-tab-group>
       </mat-card>
+      <ul>
+        <li>Running man plan</li>
+        <li>Daily stairs climbing</li>
+        <li>Serene stretches</li>
+      </ul>
     </mat-sidenav>
+
     <section class="empty-conversation" *ngIf="selectedConversation">
       <h1 class="mat-display-1">middle pannel</h1>
     </section>
