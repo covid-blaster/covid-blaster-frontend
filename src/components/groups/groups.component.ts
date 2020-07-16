@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 })
 export class GroupsComponent implements OnInit {
   createGroupForm: FormGroup;
+  times: string[] = ['15', '30', '45', '60'];
   constructor(
     private formBuilder: FormBuilder,
     private router: Router
