@@ -9,6 +9,7 @@ import { MatDialog } from '@angular/material/dialog';
 })
 export class FeedPageComponent implements OnInit {
 
+  fakepost:boolean;
   selectedConversation: any
   text: string
   events: Array<any> = []
@@ -18,6 +19,7 @@ export class FeedPageComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.fakepost = false;
   }
 
   onAddPostClick() {
@@ -29,9 +31,9 @@ export class FeedPageComponent implements OnInit {
       maxHeight: '100%',
     });
 
-    // dialogRef.afterClosed().subscribe(result => {
-    //   console.log("Pizza"); // Pizza!
-    // });
+    dialogRef.afterClosed().subscribe(result => {
+       this.fakepost = true;
+    });
 
     // dialogRef.close('Pizza!');
   }
