@@ -59,6 +59,13 @@
       <mat-divider></mat-divider>
       <mat-list dense class="conversation-history mat-typography">
 
+        <mat-card *ngIf= "fakepost" class="feed-card">
+          <mat-icon class="inside-post">account_circle</mat-icon>
+          <h3> Varun Chennamadhava</h3>
+          <div>I went for a run</div>
+          <mat-chip>Cardio</mat-chip>
+        </mat-card>
+
         <mat-card class="feed-card">
           <mat-icon class="inside-post">account_circle</mat-icon>
           <h3> Steven Chen</h3>
@@ -90,6 +97,8 @@
           <div>Got my energy bars from the local market.</div>
           <mat-chip>Cardio</mat-chip>
         </mat-card>
+
+
 
         <!-- <mat-card class="feed-card">
           <mat-icon class="inside-post">account_circle</mat-icon>
