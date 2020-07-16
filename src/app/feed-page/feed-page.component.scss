@@ -125,7 +125,7 @@ section .mat-list .mat-list-avatar{
 }
 
 .feed-card {
-    width: 80%;
+    width: 75%;
     margin: 50px;
 }
 .mat-sidenav {
@@ -152,4 +152,20 @@ li {
 
 div {
   margin-bottom: 0.5em
+h3 {
+  font-weight: bold;
+  font-size: 1em
+}
+
+.blue-button {
+  background-color: #17394f;
+  color: white;
+  margin: 4em;
+  float: right;
+  font-size: 1em !important;
+  white-space: pre-wrap;
+}
+
+.shift-right {
+  margin-left: 10em;
 }

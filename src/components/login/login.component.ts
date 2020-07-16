@@ -1,8 +1,10 @@
+import { RouterModule } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, FormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -16,15 +18,15 @@ export class LoginComponent implements OnInit {
   registerForm: FormGroup;
   constructor(
     private formBuilder: FormBuilder,
-    private http: HttpClient
+    private http: HttpClient,
+    private router: Router
   ) { }
 
   ngOnInit() {
     this.buildForm();
     this.truthVariable = false;
     this.extraVariable = true;
-    this.http.get("https://covid-blasters-app.us-east.cf.appdomain.cloud/health").subscribe(res => console.log(res));
-
+    this.http.get("//covid-blasters-app.us-east.cf.appdomain.cloud/health").subscribe(res => console.log(res));
     //http://dummy.restapiexample.com/api/v1/employees
   }
 
@@ -46,6 +48,7 @@ export class LoginComponent implements OnInit {
     console.log(this.registerForm.value.lastName);
     console.log(this.registerForm.value.email);
     console.log(this.registerForm.value.password);
+    this.registerClick();
   }
 
   loginSubmitForm() {
@@ -67,5 +70,9 @@ export class LoginComponent implements OnInit {
   goBack() {
     this.truthVariable = false;
     this.extraVariable = true;
+  }
+
+  registerClick() {
+    this.router.navigateByUrl("/groups");
   }
 }
